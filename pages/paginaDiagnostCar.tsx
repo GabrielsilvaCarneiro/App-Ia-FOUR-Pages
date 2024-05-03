@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Platform, StatusBar, ScrollView, ActivityIndicator, Keyboard } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Platform, StatusBar, ScrollView, ActivityIndicator, Keyboard, Alert } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
 const alturaStatusBar = StatusBar.currentHeight;
 const KEY_GPT = 'your key'; // Substitua 'your key' pela sua chave da API OpenAI
 
-export function Lazer() {
+export function Car() {
   const [loading, setLoading] = useState(false);
   const [diagnosticoPrincipal, setDiagnosticoPrincipal] = useState("");
   const [carro, setCarro] = useState("");
@@ -53,7 +53,7 @@ export function Lazer() {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="dark-content" translucent={true} backgroundColor="#f1f1f1" />
+      <StatusBar barStyle="dark-content" translucent={true} backgroundColor="#FFF" />
       <Text style={styles.header}>DiagnostCar</Text>
       <View style={styles.form}>
         <Text style={styles.label}>Informe qual o problema:</Text>

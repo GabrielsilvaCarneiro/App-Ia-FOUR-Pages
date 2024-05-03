@@ -2,8 +2,10 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from '@expo/vector-icons/'
 import { Home } from './pages/index'
 import { Treino } from './pages/paginaTreino'
-import { Lazer } from './pages/paginaLazer'
+import { Car } from './pages/paginaDiagnostCar'
 import { Recomendacao } from './pages/paginaRecomendacao'
+import React from "react";
+import { FontAwesome5 } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
@@ -39,14 +41,14 @@ export function Routes() {
                 }}
             />
             <Tab.Screen
-                name="lazer"
-                component={Lazer}
+                name="DiagnostCar"
+                component={Car}
                 options={{
                     tabBarShowLabel: false,
                     headerShown: false,
                     tabBarIcon: ({ focused }) => {
                         if (focused) {
-                            return (<Ionicons size={25} color={"#000"} name="football" />)
+                            return (<FontAwesome5 name="car-crash" size={24} color="black" />)
                         }
                         return (<Ionicons size={20} color={"#000"} name="football-outline" />)
                     }
